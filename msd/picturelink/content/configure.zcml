@@ -1,0 +1,28 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    i18n_domain="msd.picturelink">
+
+    <!-- configure your content components here -->
+
+    <!-- -*- extra stuff goes here -*- -->
+    <class class=".picturelink.PictureLink">
+
+        <require
+            permission="zope2.View"
+            interface="..interfaces.IPictureLink"
+            />
+
+        <require
+            permission="cmf.ModifyPortalContent"
+            set_schema="..interfaces.IPictureLink"
+            />
+
+        <require 
+            permission="zope2.View" 
+            attributes="tag" 
+        /> 
+
+    </class>
+
+</configure>
